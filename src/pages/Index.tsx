@@ -455,7 +455,7 @@ const Index = () => {
             <h2 className="text-4xl font-bold mb-4">Контакты</h2>
             <p className="text-xl text-gray-600">Свяжитесь с нами любым удобным способом</p>
           </div>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-3 gap-6">
             <Card>
               <CardHeader>
                 <div className="flex items-center gap-4">
@@ -463,8 +463,11 @@ const Index = () => {
                     <Icon name="Phone" className="text-primary" size={24} />
                   </div>
                   <div>
-                    <CardTitle>Телефон</CardTitle>
-                    <CardDescription className="text-lg">+7 (978) 123-45-67</CardDescription>
+                    <CardTitle>Телефон / WhatsApp</CardTitle>
+                    <CardDescription className="text-lg">
+                      <a href="tel:+79683998899" className="hover:text-primary transition-colors">+7 (968) 399-88-99</a>
+                      <p className="text-sm mt-1 text-gray-500">Макс • Звонки, SMS, WhatsApp</p>
+                    </CardDescription>
                   </div>
                 </div>
               </CardHeader>
@@ -477,12 +480,29 @@ const Index = () => {
                   </div>
                   <div>
                     <CardTitle>Email</CardTitle>
-                    <CardDescription className="text-lg">info@sea-coast.ru</CardDescription>
+                    <CardDescription className="text-lg">
+                      <a href="mailto:Rekuto2011@yandex.ru" className="hover:text-primary transition-colors">Rekuto2011@yandex.ru</a>
+                    </CardDescription>
                   </div>
                 </div>
               </CardHeader>
             </Card>
-            <Card className="md:col-span-2">
+            <Card>
+              <CardHeader>
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                    <Icon name="Send" className="text-primary" size={24} />
+                  </div>
+                  <div>
+                    <CardTitle>Telegram</CardTitle>
+                    <CardDescription className="text-lg">
+                      <a href="https://t.me/+79683998899" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Написать в Telegram</a>
+                    </CardDescription>
+                  </div>
+                </div>
+              </CardHeader>
+            </Card>
+            <Card className="md:col-span-3">
               <CardHeader>
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
@@ -514,15 +534,26 @@ const Index = () => {
             село Витино, улица Пальмовая, 777
           </p>
           <div className="flex justify-center gap-6 mb-6">
-            <Button variant="ghost" size="icon" className="text-white hover:text-primary">
-              <Icon name="Phone" size={24} />
-            </Button>
-            <Button variant="ghost" size="icon" className="text-white hover:text-primary">
-              <Icon name="Mail" size={24} />
-            </Button>
-            <Button variant="ghost" size="icon" className="text-white hover:text-primary">
-              <Icon name="MessageCircle" size={24} />
-            </Button>
+            <a href="tel:+79683998899">
+              <Button variant="ghost" size="icon" className="text-white hover:text-primary">
+                <Icon name="Phone" size={24} />
+              </Button>
+            </a>
+            <a href="https://wa.me/79683998899" target="_blank" rel="noopener noreferrer">
+              <Button variant="ghost" size="icon" className="text-white hover:text-primary">
+                <Icon name="MessageCircle" size={24} />
+              </Button>
+            </a>
+            <a href="https://t.me/+79683998899" target="_blank" rel="noopener noreferrer">
+              <Button variant="ghost" size="icon" className="text-white hover:text-primary">
+                <Icon name="Send" size={24} />
+              </Button>
+            </a>
+            <a href="mailto:Rekuto2011@yandex.ru">
+              <Button variant="ghost" size="icon" className="text-white hover:text-primary">
+                <Icon name="Mail" size={24} />
+              </Button>
+            </a>
           </div>
           <p className="text-sm text-gray-500">
             © 2024 Морской Берег. Все права защищены.

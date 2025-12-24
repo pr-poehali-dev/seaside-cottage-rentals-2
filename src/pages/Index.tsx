@@ -37,39 +37,12 @@ const Index = () => {
   const houses = [
     {
       id: 'house1',
-      title: 'Домик №1 Стандарт',
-      price: 3500,
-      guests: 4,
-      rooms: 3,
-      image: 'https://cdn.poehali.dev/projects/0b5f6a11-cc78-4760-b3f6-03ef5addd690/files/bb0e6ca7-5315-4026-be13-6112d9c4a993.jpg',
-      features: ['Кондиционер', 'Wi-Fi', 'Кухня', 'Терраса']
-    },
-    {
-      id: 'house2',
-      title: 'Домик №2 Комфорт',
-      price: 4500,
-      guests: 6,
-      rooms: 3,
-      image: 'https://cdn.poehali.dev/projects/0b5f6a11-cc78-4760-b3f6-03ef5addd690/files/bb0e6ca7-5315-4026-be13-6112d9c4a993.jpg',
-      features: ['Кондиционер', 'Wi-Fi', 'Кухня', 'Терраса', 'Вид на море']
-    },
-    {
-      id: 'house3',
-      title: 'Домик №3 Комфорт',
-      price: 4500,
-      guests: 6,
-      rooms: 3,
-      image: 'https://cdn.poehali.dev/projects/0b5f6a11-cc78-4760-b3f6-03ef5addd690/files/bb0e6ca7-5315-4026-be13-6112d9c4a993.jpg',
-      features: ['Кондиционер', 'Wi-Fi', 'Кухня', 'Терраса', 'Вид на море']
-    },
-    {
-      id: 'house4',
-      title: 'Домик №4 Люкс',
+      title: 'Коттедж',
       price: 6000,
       guests: 8,
       rooms: 3,
-      image: 'https://cdn.poehali.dev/projects/0b5f6a11-cc78-4760-b3f6-03ef5addd690/files/bb0e6ca7-5315-4026-be13-6112d9c4a993.jpg',
-      features: ['Кондиционер', 'Wi-Fi', 'Премиум кухня', 'Большая терраса', 'Вид на море', 'Джакузи']
+      image: 'https://cdn.poehali.dev/projects/0b5f6a11-cc78-4760-b3f6-03ef5addd690/files/293c1f2f-3487-4851-9f84-e906c41bc1c7.jpg',
+      features: ['Кондиционер', 'Wi-Fi', 'Кухня', 'Терраса', 'Бассейн', 'Парковка']
     }
   ];
 
@@ -157,11 +130,11 @@ const Index = () => {
             <div className="space-y-6 animate-fade-in">
               <Badge className="bg-accent text-white">Крым • Черное море • Витино</Badge>
               <h1 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
-                Уютные домики у моря
+                Уютный коттедж у моря
               </h1>
               <p className="text-xl text-gray-600">
-                4 трехкомнатных домика для вашего идеального отдыха в 500 метрах от моря. 
-                Бассейн, кафе и детская площадка на территории.
+                Трёхкомнатный коттедж для вашего идеального отдыха в 500 метрах от моря. 
+                От 6000 ₽/сутки. Заезд после 15:00, выезд до 12:00.
               </p>
               <div className="flex gap-4">
                 <Button size="lg" onClick={() => scrollToSection('booking')} className="text-lg">
@@ -175,8 +148,8 @@ const Index = () => {
             </div>
             <div className="relative animate-scale-in">
               <img 
-                src="https://cdn.poehali.dev/projects/0b5f6a11-cc78-4760-b3f6-03ef5addd690/files/bb0e6ca7-5315-4026-be13-6112d9c4a993.jpg"
-                alt="Домик у моря"
+                src="https://cdn.poehali.dev/projects/0b5f6a11-cc78-4760-b3f6-03ef5addd690/files/293c1f2f-3487-4851-9f84-e906c41bc1c7.jpg"
+                alt="Коттедж у моря"
                 className="rounded-2xl shadow-2xl w-full h-[500px] object-cover"
               />
               <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-xl">
@@ -196,8 +169,8 @@ const Index = () => {
       <section id="houses" className="py-16 bg-white px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Наши домики</h2>
-            <p className="text-xl text-gray-600">4 домика на выбор для вашего отдыха</p>
+            <h2 className="text-4xl font-bold mb-4">Наш коттедж</h2>
+            <p className="text-xl text-gray-600">Комфортный отдых для всей семьи</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {houses.map((house) => (
@@ -225,9 +198,10 @@ const Index = () => {
                         <Badge key={i} variant="secondary" className="text-xs">{feature}</Badge>
                       ))}
                     </div>
-                    <div className="pt-4 border-t">
-                      <p className="text-2xl font-bold text-primary">{house.price}₽</p>
+                    <div className="pt-4 border-t space-y-1">
+                      <p className="text-2xl font-bold text-primary">от {house.price}₽</p>
                       <p className="text-sm text-gray-600">за сутки</p>
+                      <p className="text-xs text-gray-500">Заезд после 15:00 • Выезд до 12:00</p>
                     </div>
                     <Button onClick={() => scrollToSection('booking')} className="w-full">
                       Забронировать
@@ -249,7 +223,7 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-6">
             <div className="md:col-span-2 relative group overflow-hidden rounded-2xl">
               <img 
-                src="https://cdn.poehali.dev/projects/0b5f6a11-cc78-4760-b3f6-03ef5addd690/files/21e93386-aff5-4e68-ab01-7de85eeb7d17.jpg"
+                src="https://cdn.poehali.dev/projects/0b5f6a11-cc78-4760-b3f6-03ef5addd690/files/fafe5473-25f3-4b9c-9a42-a6b77a415477.jpg"
                 alt="Бассейн"
                 className="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-110"
               />
@@ -259,12 +233,32 @@ const Index = () => {
             </div>
             <div className="relative group overflow-hidden rounded-2xl">
               <img 
-                src="https://cdn.poehali.dev/projects/0b5f6a11-cc78-4760-b3f6-03ef5addd690/files/4032a7ae-4a03-4735-b02d-053f917c0408.jpg"
-                alt="Беседка-кафе"
+                src="https://cdn.poehali.dev/projects/0b5f6a11-cc78-4760-b3f6-03ef5addd690/files/293c1f2f-3487-4851-9f84-e906c41bc1c7.jpg"
+                alt="Коттедж"
                 className="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-110"
               />
               <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg">
-                <p className="font-semibold">Беседка-кафе</p>
+                <p className="font-semibold">Коттедж</p>
+              </div>
+            </div>
+            <div className="relative group overflow-hidden rounded-2xl">
+              <img 
+                src="https://cdn.poehali.dev/projects/0b5f6a11-cc78-4760-b3f6-03ef5addd690/files/fee90bbb-d724-4baa-8cbb-0613156f1830.jpg"
+                alt="Интерьер"
+                className="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg">
+                <p className="font-semibold">Интерьер</p>
+              </div>
+            </div>
+            <div className="md:col-span-2 relative group overflow-hidden rounded-2xl">
+              <img 
+                src="https://cdn.poehali.dev/projects/0b5f6a11-cc78-4760-b3f6-03ef5addd690/files/293c1f2f-3487-4851-9f84-e906c41bc1c7.jpg"
+                alt="Территория"
+                className="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg">
+                <p className="font-semibold">Территория</p>
               </div>
             </div>
           </div>

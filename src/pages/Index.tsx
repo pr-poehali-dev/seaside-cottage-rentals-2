@@ -466,7 +466,7 @@ const Index = () => {
                     <CardTitle>Телефон / WhatsApp</CardTitle>
                     <CardDescription className="text-lg">
                       <a href="tel:+79683998899" className="hover:text-primary transition-colors">+7 (968) 399-88-99</a>
-                      <p className="text-sm mt-1 text-gray-500">Светлана • Звонки, SMS, WhatsApp</p>
+                      <p className="text-sm mt-1 text-gray-500">Макс • Звонки, SMS, WhatsApp</p>
                     </CardDescription>
                   </div>
                 </div>
